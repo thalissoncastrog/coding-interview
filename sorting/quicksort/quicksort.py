@@ -23,7 +23,9 @@ def partition(list, start, end):
     list[i], list[end] = list[end], list[i]
     return i
 
-arr = [3, 7, 5, 1, 2]
+#arr = [3, 7, 5, 1, 2] 
+#arr = [3, 5, 5, 1, 2]
+arr = [1, 2, 3, 5, 5]
 
 result = quicksort(arr)
 
