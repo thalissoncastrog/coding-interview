@@ -65,10 +65,33 @@ class LinkedList:
                 position += 1
                 currentNode = currentNode.next
 
-            if currentNode != None:
+            if currentNode is not None:
                 currentNode.data = data
             else:
-                print("Index not present") 
+                print("Index not present")
+
+    def GetNodeAtIndex(self, index):
+
+        currentNode = self.head
+
+        if currentNode is None:
+            return "Empty List"
+
+        position = 0 
+
+        if position == index:
+            return currentNode.data
+        
+        while(currentNode != None and position != index):
+            position += 1
+            currentNode = currentNode.next
+        
+        if currentNode is not None:
+            return currentNode.data
+        
+        return "Index not present"
+                
+            
 
     def RemoveFirstNode(self):
             
@@ -104,7 +127,7 @@ class LinkedList:
                 position += 1
                 currentNode = currentNode.next
             
-            if currentNode != None:
+            if currentNode is not None:
                 currentNode.next = currentNode.next.next # type: ignore
             else:
                 print("Index not present")
@@ -119,7 +142,7 @@ class LinkedList:
         while(currentNode != None and currentNode.next.data != data): # type: ignore
             currentNode = currentNode.next
 
-        if currentNode != None:
+        if currentNode is not None:
             currentNode.next = currentNode.next.next # type: ignore
 
     def SizeOf(self):
