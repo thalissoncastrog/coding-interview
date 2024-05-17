@@ -35,7 +35,7 @@ class Queue:
             return
     
         data = self.first.data
-        self.first = first.next
+        self.first = self.first.next
 
         if self.first is None:
            self.last = None 
