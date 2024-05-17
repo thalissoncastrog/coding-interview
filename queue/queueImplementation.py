@@ -52,8 +52,4 @@ class Queue:
     
     def IsEmpty(self):
         
-        if self.first is None:
-            return True
-        
-        return False
-    
+        return self.first is None
